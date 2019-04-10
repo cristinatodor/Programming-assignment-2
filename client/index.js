@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 	document.getElementById('get-see-do').addEventListener('click', async function(event){
 		try {
-			let responseTitles = await fetch('http://127.0.01:8090/list-see-titles');
-			let responseDescriptions = await fetch('http://127.0.01:8090/list-see-descriptions');
-			let responseImages = await fetch('http://127.0.01:8090/list-see-images');
+			let responseTitles = await fetch('http://127.0.01:8080/list-see-titles');
+			let responseDescriptions = await fetch('http://127.0.01:8080/list-see-descriptions');
+			let responseImages = await fetch('http://127.0.01:8080/list-see-images');
 	
 			if(!responseTitles.ok){
 				throw new Error("Problem retrieving places " + responseTitles.code);
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	
 	window.addEventListener("load", async function(event){
 		try {
-			let response = await fetch('http://127.0.01:8090/about-location');
+			let response = await fetch('http://127.0.01:8080/about-location');
 			
 			if(!response.ok){
 				throw new Error("Problem retrieving location details" + response.code);
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	
 	window.addEventListener("load", async function(event){
 		try {
-			let response = await fetch('http://127.0.01:8090/about-history');
+			let response = await fetch('http://127.0.01:8080/about-history');
 			
 			if(!response.ok){
 				throw new Error("Problem retrieving history details" + response.code);
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	
 	window.addEventListener("load", async function(event){
 		try {
-			let response = await fetch('http://127.0.01:8090/about-population');
+			let response = await fetch('http://127.0.01:8080/about-population');
 			
 			if(!response.ok){
 				throw new Error("Problem retrieving population details" + response.code);
@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	
 	window.addEventListener("load", async function(event){
 		try {
-			let response = await fetch('http://127.0.01:8090/about-industry');
+			let response = await fetch('http://127.0.01:8080/about-industry');
 		
 			if(!response.ok){
 				throw new Error("Problem retrieving industry details" + response.code);
@@ -187,7 +187,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	
 	window.addEventListener("load", async function(event){
 		try {
-			let response = await fetch('http://127.0.01:8090/list-events');
+			let response = await fetch('http://127.0.01:8080/list-events');
 			
 			if(!response.ok){
 				throw new Error("Problem retrieving events" + response.code);
@@ -238,7 +238,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	};
 	window.addEventListener("load", async function(event){
 		try {
-			let response = await fetch('http://127.0.01:8090/list-reviews');
+			let response = await fetch('http://127.0.01:8080/list-reviews');
 			
 			if(!response.ok){
 				throw new Error("Problem retrieving reviews" + response.code);
@@ -256,9 +256,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	
 	document.getElementById('get-eat').addEventListener('click', async function(event){
 		try {
-			let responseTitles = await fetch('http://127.0.01:8090/list-eat-titles');
-			let responseDescriptions = await fetch('http://127.0.01:8090/list-eat-descriptions');
-			let responseImages = await fetch('http://127.0.01:8090/list-eat-images');
+			let responseTitles = await fetch('http://127.0.01:8080/list-eat-titles');
+			let responseDescriptions = await fetch('http://127.0.01:8080/list-eat-descriptions');
+			let responseImages = await fetch('http://127.0.01:8080/list-eat-images');
 	
 			if(!responseTitles.ok){
 				throw new Error("Problem retrieving places " + responseTitles.code);
@@ -326,7 +326,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			let add_review_author = document.getElementById('add_review_author').value;
 			let add_review_text = document.getElementById('add_review_text').value;
 			
-			let response = await fetch('http://127.0.01:8090/add-review', 
+			let response = await fetch('http://127.0.01:8080/add-review', 
 											{
 												method: "POST",
 												headers: {
@@ -338,7 +338,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				throw new Error("Problem adding review text" + response.code);
 			}
 			
-			response = await fetch('http://127.0.01:8090/list-reviews');
+			response = await fetch('http://127.0.01:8080/list-reviews');
 			
 			if(!response.ok){
 				throw new Error("Problem retrieving reviews" + response.code);
@@ -365,7 +365,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   
   try{
     let potato_type = document.getElementById('potato_type').value;
-    let response = await fetch('http://127.0.01:8090/add',
+    let response = await fetch('http://127.0.01:8080/add',
                                {
                                  method: "POST",
                                  headers: {
