@@ -14,7 +14,7 @@ app.use(function(req, res, next) {
 let aboutLocation = ["Geographically, it is roughly equidistant from Bucharest, Budapest and Belgrade. Located in the Somesul Mic River valley, the city is considered the unofficial capital to the historical province of Transylvania."];
 
 app.get('/about-location', function (req, resp){
-	resp.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:8080');
+	resp.setHeader('Access-Control-Allow-Origin', 'http://172.30.63.127:8080');
     resp.send(aboutLocation);
 });
 
