@@ -8,27 +8,27 @@ app.use(bodyParser.urlencoded({ extended: false }));
 let aboutLocation = ["Geographically, it is roughly equidistant from Bucharest, Budapest and Belgrade. Located in the Somesul Mic River valley, the city is considered the unofficial capital to the historical province of Transylvania."];
 
 app.get('/about-location', function (req, resp){
-	resp.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
+	resp.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:8080');
     resp.send(aboutLocation);
 });
 
 let aboutHistory = ["Cluj is an urban republic, a homeland for its inhabitants, a city where the organization of local administration, the proper distribution of taxes, the public order and urban development were, most of the time, more important than European events or princes’ politics."];
 
 app.get('/about-history', function (req, resp) {
-	resp.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
+	resp.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:8080');
 	resp.send(aboutHistory);
 });
 
 let aboutPopulation = ["From the Middle Ages onwards, the city of Cluj has been a multicultural city with a diverse cultural and religious life. The population is made up of ethnic Romanians(81.5%), Hungarians, Romani, Germans and Jews."]; 
 
 app.get('/about-population', function (req, resp) {
-	resp.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
+	resp.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:8080');
 	resp.send(aboutPopulation);
 });
 
 let aboutIndustry = ["An example of such initiative is Cluj IT Cluster. It envisions becoming one of the most credible suppliers from Central and Eastern Europe for innovative IT services and products as well as of organizational support systems, with the majority of its members able to be competitive on national and international markets."];
 app.get('/about-industry', function (req, resp) {
-	resp.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
+	resp.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:8080');
 	resp.send(aboutIndustry);
 });
 
@@ -73,17 +73,17 @@ let seeImages = [
 ];
  
 app.get('/list-see-titles', function (req, resp){
-	resp.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
+	resp.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:8080');
     resp.send(seeTitles);
 });
 
 app.get('/list-see-descriptions', function (req, resp){
-	resp.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
+	resp.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:8080');
 	resp.send(seeDescriptions);
 });
 
 app.get('/list-see-images', function (req, resp){
-	resp.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
+	resp.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:8080');
 	resp.send(seeImages);
 });
 
@@ -127,17 +127,17 @@ let eatImages = [
 ];
  
 app.get('/list-eat-titles', function (req, resp){
-	resp.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
+	resp.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:8080');
     resp.send(eatTitles);
 });
 
 app.get('/list-eat-descriptions', function (req, resp){
-	resp.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
+	resp.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:8080');
 	resp.send(eatDescriptions);
 });
 
 app.get('/list-eat-images', function (req, resp){
-	resp.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
+	resp.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:8080');
 	resp.send(eatImages);
 });
 
@@ -154,7 +154,7 @@ let events = [
 ];
 
 app.get('/list-events', function (req, resp){
-	resp.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
+	resp.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:8080');
 	resp.send(events);
 });
 
@@ -169,12 +169,12 @@ let reviews = [
 ];
 
 app.get('/list-reviews', function (req, resp){
-	resp.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
+	resp.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:8080');
 	resp.send(reviews);
 });
 
 app.post('/add-review', function(req, resp) {
-	resp.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
+	resp.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:8080');
 	const revTitle = req.body.add_review_title;
 	const revAuthor = req.body.add_review_author;
 	const revText = req.body.add_review_text;
