@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	
 	window.addEventListener("load", async function(event){
 		try {
-			let response = await fetch('http://127.0.0.1:8080/about-location');
+			let response = await fetch(base_url + '/about-location');
 			
 			if(!response.ok){
 				throw new Error("Problem retrieving location details" + response.code);
