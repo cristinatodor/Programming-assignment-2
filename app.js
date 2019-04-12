@@ -11,8 +11,8 @@ app.use(function(req, res, next) {
   next();
 });
 
-var server_port = process.env.OPENSHIFT_NODEJS_PORT
-var server_ip_address = process.env.OPENSHIFT_NODEJS_IP
+var server_port = process.env.CITYPAGE_SERVICE_PORT
+var server_ip_address = process.env.CITYPAGE_SERVICE_HOST
 
 console.log(server_ip_address);
 console.log(server_port);
