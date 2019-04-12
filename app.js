@@ -15,6 +15,7 @@ var server_port = process.env.OPENSHIFT_NODEJS_PORT
 var server_ip_address = process.env.OPENSHIFT_NODEJS_IP
 
 console.log(server_ip_address);
+console.log(server_port);
 
 let aboutLocation = ["Geographically, it is roughly equidistant from Bucharest, Budapest and Belgrade. Located in the Somesul Mic River valley, the city is considered the unofficial capital to the historical province of Transylvania."];
 
