@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(event) {
+
 	var base_url = 'http://127.0.0.1:8080';
-	
+
 	document.getElementById('get-see-do').addEventListener('click', async function(event){
 		try {
 			let responseTitles = await fetch(base_url + '/list-see-titles');
