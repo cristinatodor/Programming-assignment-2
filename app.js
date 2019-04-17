@@ -153,21 +153,32 @@ app.get('/list-eat-images', function (req, resp){
 });
 
 let events = [
-	{"title": "Event 1", "location": "Location 1", "date": "01.01.2019", "text": "here is the event 1"},
-	{"title": "Event 2", "location": "Location 2", "date": "01.12.2019", "text": "here is the event 2"},
-	{"title": "Event 3", "location": "Location 3", "date": "12.05.2019", "text": "here is the event 3"},
-	{"title": "Event 4", "location": "Location 4", "date": "05.06.2019", "text": "here is the event 4"},
-	{"title": "Event 5", "location": "Location 5", "date": "04.08.2019", "text": "here is the event 5"},
-	{"title": "Event 6", "location": "Location 6", "date": "03.12.2019", "text": "here is the event 6"},
-	{"title": "Event 7", "location": "Location 7", "date": "13.11.2019", "text": "here is the event 7"},
-	{"title": "Event 8", "location": "Location 8", "date": "13.11.2019", "text": "here is the event 8"},
-	{"title": "Event 9", "location": "Location 9", "date": "13.11.2019", "text": "here is the event 9"}
+	{"title": "Event 1", "location": "Location 1", "date": "01.01.2019", "text": "here is the event 1", "count": "134"},
+	{"title": "Event 2", "location": "Location 2", "date": "01.12.2019", "text": "here is the event 2", "count": "101"},
+	{"title": "Event 3", "location": "Location 3", "date": "12.05.2019", "text": "here is the event 3", "count": "59"},
+	{"title": "Event 4", "location": "Location 4", "date": "05.06.2019", "text": "here is the event 4", "count": "38"},
+	{"title": "Event 5", "location": "Location 5", "date": "04.08.2019", "text": "here is the event 5", "count": "156"},
+	{"title": "Event 6", "location": "Location 6", "date": "03.12.2019", "text": "here is the event 6", "count": "342"},
+	{"title": "Event 7", "location": "Location 7", "date": "13.11.2019", "text": "here is the event 7", "count": "45"},
+	{"title": "Event 8", "location": "Location 8", "date": "13.11.2019", "text": "here is the event 8", "count": "67"},
+	{"title": "Event 9", "location": "Location 9", "date": "13.11.2019", "text": "here is the event 9", "count": "180"}
 ];
 
 app.get('/list-events', function (req, resp){
 	resp.setHeader('Access-Control-Allow-Origin', route_url);
 	resp.send(events);
 });
+
+app.post('/subscribe-event', function(req, resp) {
+	resp.setHeader('Access-Control-Allow-Origin', route_url);
+	const event_no = parseInt(req.body.event_no); 
+	const add_event_count = req.body.add_event_count; 
+	
+	events[event_no-1].count = add_event_count;
+	resp.send("Subscribed to event");
+});
+
+
 
 let reviews = [
 	{"title": "Review 1", "author": "John", "date": "01.01.2019", "text": "here is the review 1"},
@@ -207,19 +218,8 @@ app.post('/add-review', function(req, resp) {
 					date: curDay(), 
 					text: revText });
 
-	//console.log(reviews);
 	resp.send("Added reviews");
 });
-
-
-
-
-/*app.post('/add', function (req, resp){
-  const pot = req.body.potato_type;
-  console.log(req.body);
-  potatoes.push(pot);
-  resp.send("Fine that worked");
-}); */
 
 
 

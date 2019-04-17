@@ -142,50 +142,70 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	function writeEvents(events) {
 		let len = events.length; 
 		
-		document.getElementById('event-title1').innerHTML = events[len-1].title;
-		document.getElementById('event-location1').innerHTML = "Location: " + events[len-1].location;
-		document.getElementById('event-date1').innerHTML = events[len-1].date;
-		document.getElementById('event-text1').innerHTML = events[len-1].text;
+		document.getElementById('event-title1').innerHTML = events[len-9].title;
+		document.getElementById('event-location1').innerHTML = "Location: " + events[len-9].location;
+		document.getElementById('event-date1').innerHTML = events[len-9].date;
+		document.getElementById('event-text1').innerHTML = events[len-9].text;
+		document.getElementById('event-count1').innerHTML = events[len-9].count + " people are interested";
+		document.getElementById('event-count1-value').value = events[len-9].count;
 		
-		document.getElementById('event-title2').innerHTML = events[len-2].title;
-		document.getElementById('event-location2').innerHTML = "Location: " + events[len-2].location;
-		document.getElementById('event-date2').innerHTML = events[len-2].date;
-		document.getElementById('event-text2').innerHTML = events[len-2].text;
 		
-		document.getElementById('event-title3').innerHTML = events[len-3].title;
-		document.getElementById('event-location3').innerHTML = "Location: " + events[len-3].location;
-		document.getElementById('event-date3').innerHTML = events[len-3].date;
-		document.getElementById('event-text3').innerHTML = events[len-3].text;	
+		document.getElementById('event-title2').innerHTML = events[len-8].title;
+		document.getElementById('event-location2').innerHTML = "Location: " + events[len-8].location;
+		document.getElementById('event-date2').innerHTML = events[len-8].date;
+		document.getElementById('event-text2').innerHTML = events[len-8].text;
+		document.getElementById('event-count2').innerHTML = events[len-8].count + " people are interested";
+		document.getElementById('event-count2-value').value = events[len-8].count;
 		
-		document.getElementById('event-title4').innerHTML = events[len-4].title;
-		document.getElementById('event-location4').innerHTML = "Location: " + events[len-4].location;
-		document.getElementById('event-date4').innerHTML = events[len-4].date;
-		document.getElementById('event-text4').innerHTML = events[len-4].text;
+		document.getElementById('event-title3').innerHTML = events[len-7].title;
+		document.getElementById('event-location3').innerHTML = "Location: " + events[len-7].location;
+		document.getElementById('event-date3').innerHTML = events[len-7].date;
+		document.getElementById('event-text3').innerHTML = events[len-7].text;	
+		document.getElementById('event-count3').innerHTML = events[len-7].count + " people are interested";
+		document.getElementById('event-count3-value').value = events[len-7].count;
+		
+		
+		document.getElementById('event-title4').innerHTML = events[len-6].title;
+		document.getElementById('event-location4').innerHTML = "Location: " + events[len-6].location;
+		document.getElementById('event-date4').innerHTML = events[len-6].date;
+		document.getElementById('event-text4').innerHTML = events[len-6].text;
+		document.getElementById('event-count4').innerHTML = events[len-6].count + " people are interested";
+		document.getElementById('event-count4-value').value = events[len-6].count;
 			
 		document.getElementById('event-title5').innerHTML = events[len-5].title;
 		document.getElementById('event-location5').innerHTML = "Location: " + events[len-5].location;
 		document.getElementById('event-date5').innerHTML = events[len-5].date;
 		document.getElementById('event-text5').innerHTML = events[len-5].text;
+		document.getElementById('event-count5').innerHTML = events[len-5].count + " people are interested";
+		document.getElementById('event-count5-value').value = events[len-5].count;
 			
-		document.getElementById('event-title6').innerHTML = events[len-6].title;
-		document.getElementById('event-location6').innerHTML = "Location: " + events[len-6].location;
-		document.getElementById('event-date6').innerHTML = events[len-6].date;
-		document.getElementById('event-text6').innerHTML = events[len-6].text;
+		document.getElementById('event-title6').innerHTML = events[len-4].title;
+		document.getElementById('event-location6').innerHTML = "Location: " + events[len-4].location;
+		document.getElementById('event-date6').innerHTML = events[len-4].date;
+		document.getElementById('event-text6').innerHTML = events[len-4].text;
+		document.getElementById('event-count6').innerHTML = events[len-4].count + " people are interested";
+		document.getElementById('event-count6-value').value = events[len-4].count;
 			
-		document.getElementById('event-title7').innerHTML = events[len-7].title;
-		document.getElementById('event-location7').innerHTML = "Location: " + events[len-7].location;
-		document.getElementById('event-date7').innerHTML = events[len-7].date;
-		document.getElementById('event-text7').innerHTML = events[len-7].text;
+		document.getElementById('event-title7').innerHTML = events[len-3].title;
+		document.getElementById('event-location7').innerHTML = "Location: " + events[len-3].location;
+		document.getElementById('event-date7').innerHTML = events[len-3].date;
+		document.getElementById('event-text7').innerHTML = events[len-3].text;
+		document.getElementById('event-count7').innerHTML = events[len-3].count + " people are interested";
+		document.getElementById('event-count7-value').value = events[len-3].count;
 			
-		document.getElementById('event-title8').innerHTML = events[len-8].title;
-		document.getElementById('event-location8').innerHTML = "Location: " + events[len-8].location;
-		document.getElementById('event-date8').innerHTML = events[len-8].date;
-		document.getElementById('event-text8').innerHTML = events[len-8].text;
+		document.getElementById('event-title8').innerHTML = events[len-2].title;
+		document.getElementById('event-location8').innerHTML = "Location: " + events[len-2].location;
+		document.getElementById('event-date8').innerHTML = events[len-2].date;
+		document.getElementById('event-text8').innerHTML = events[len-2].text;
+		document.getElementById('event-count8').innerHTML = events[len-2].count + " people are interested";
+		document.getElementById('event-count8-value').value = events[len-8].count;
 			
-		document.getElementById('event-title9').innerHTML = events[len-9].title;
-		document.getElementById('event-location9').innerHTML = "Location: " + events[len-9].location;
-		document.getElementById('event-date9').innerHTML = events[len-9].date;
-		document.getElementById('event-text9').innerHTML = events[len-9].text;
+		document.getElementById('event-title9').innerHTML = events[len-1].title;
+		document.getElementById('event-location9').innerHTML = "Location: " + events[len-1].location;
+		document.getElementById('event-date9').innerHTML = events[len-1].date;
+		document.getElementById('event-text9').innerHTML = events[len-1].text;
+		document.getElementById('event-count9').innerHTML = events[len-1].count + " people are interested";
+		document.getElementById('event-count9-value').value = events[len-1].count;
 	};
 	
 	window.addEventListener("load", async function(event){
@@ -323,7 +343,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	
 	document.getElementById('form-add-review').addEventListener('submit', async function(event) {
 		event.preventDefault();
-		alert("ooooo");
 		
 		try {
 			let add_review_title = document.getElementById('add_review_title').value;
@@ -352,13 +371,111 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			let reviews = JSON.parse(body);
 			
 			writeReviews(reviews);
+			
+			document.getElementById('reviews').scrollIntoView();
 
 		}
 		catch (error) {
 			alert("Problem encountered 9: " + error.message);
 		}
-		
 	});
+	
 
+	document.getElementById('form-subscribe-event1').addEventListener('submit', async function(event) {
+		event.preventDefault();
+		processSubmit(1);
+	});
+	document.getElementById('form-subscribe-event2').addEventListener('submit', async function(event) {
+		event.preventDefault();
+		processSubmit(2);
+	});
+	document.getElementById('form-subscribe-event3').addEventListener('submit', async function(event) {
+		event.preventDefault();
+		processSubmit(3);
+	});
+	document.getElementById('form-subscribe-event4').addEventListener('submit', async function(event) {
+		event.preventDefault();
+		processSubmit(4);
+	});
+	document.getElementById('form-subscribe-event5').addEventListener('submit', async function(event) {
+		event.preventDefault();
+		processSubmit(5);
+	});
+	document.getElementById('form-subscribe-event6').addEventListener('submit', async function(event) {
+		event.preventDefault();
+		processSubmit(6);
+	});
+	document.getElementById('form-subscribe-event7').addEventListener('submit', async function(event) {
+		event.preventDefault();
+		processSubmit(7);
+	});
+	document.getElementById('form-subscribe-event8').addEventListener('submit', async function(event) {
+		event.preventDefault();
+		processSubmit(8);
+	});
+	document.getElementById('form-subscribe-event9').addEventListener('submit', async function(event) {
+		event.preventDefault();
+		processSubmit(9);
+	});
+		
+		
+	async function processSubmit(formID){
+		try {
+			let event_no = document.getElementById('event-no' + formID).value;
+			let add_event_count = parseInt(document.getElementById('event-count' + event_no + '-value').value) + 1;
+				
+			let response = await fetch(base_url + '/subscribe-event', 
+											{
+												method: "POST",
+												headers: {
+													"Content-Type": "application/x-www-form-urlencoded"
+												}, 
+												body: "event_no=" + event_no + "&add_event_count=" + add_event_count
+											});
+				
+			if (!response.ok){
+				throw new Error("Problem subscribing to events" + response.code);
+			}
+				
+			response = await fetch(base_url + '/list-events');
+				
+			if(!response.ok){
+				throw new Error("Problem retrieving events" + response.code);
+			}
+				
+			let body = await response.text();
+			let events = JSON.parse(body);
+				
+			writeEvents(events);
+		}
+			
+		catch (error) {
+			alert("Problem encountered 10: " + error.message);
+		}
+	};
+	
+	window.addEventListener("load", async function(event){
+		try {
+			let response = await fetch('https://api.weatherbit.io/v2.0/current?city=ClujNapoca&key=9dc197fb21ab40ff91edc4cfbd39919b');
+			
+			if(!response.ok){
+				throw new Error("Problem retrieving weather" + response.code);
+			}
+			
+			let body = await response.text();
+			let weather = JSON.parse(body);
+			
+			document.getElementById('weather1').innerHTML = "<div> Temperature: " + weather.data[0].temp + "</div><br>" 
+			document.getElementById('weather1').innerHTML += "<div> Wind: " + weather.data[0].wind_spd + " m/s </div><br>";
+			document.getElementById('weather1').innerHTML += "<div> Pressure: " + weather.data[0].pres + " mb </div>"
+			
+			document.getElementById('weather2').innerHTML = "<div>" + weather.data[0].weather.description + "</div>";
+			document.getElementById('weather2').innerHTML += "<div> <img src=\"images/Weather/" + weather.data[0].weather.icon + ".png \"> </div>";
+			
+		}
+		catch (error) {
+			alert("Problem encountered 11: " + error);
+		}
+	});
 	
 });
