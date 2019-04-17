@@ -12,7 +12,7 @@ app.use(function(req, res, next) {
 });
 
 
-var route_url = 'http://127.0.0.1:8080'
+var route_url = 'http://citypage-programming-assignment-2.7e14.starter-us-west-2.openshiftapps.com';
 
 console.log(route_url);
 
