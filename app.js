@@ -181,13 +181,13 @@ app.post('/subscribe-event', function(req, resp) {
 
 
 let reviews = [
-	{"title": "Review 1", "author": "John", "date": "01.01.2019", "text": "here is the review 1"},
-	{"title": "Review 2", "author": "Dan", "date": "01.12.2019", "text": "here is the review 2"},
-	{"title": "Review 3", "author": "Alex", "date": "12.05.2019", "text": "here is the review 3"},
-	{"title": "Review 4", "author": "Josh", "date": "05.06.2019", "text": "here is the review 4"},
-	{"title": "Review 5", "author": "Will", "date": "04.08.2019", "text": "here is the review 5"},
-	{"title": "Review 6", "author": "Kyle", "date": "03.12.2019", "text": "here is the review 6"},
-	{"title": "Review 7", "author": "Kyle", "date": "13.11.2019", "text": "here is the review 7"}
+	{"title": "Review 1", "author": "John", "date": "12.03.2019", "text": "here is the review 1"},
+	{"title": "Review 2", "author": "Dan", "date": "29.03.2019", "text": "here is the review 2"},
+	{"title": "Review 3", "author": "Alex", "date": "30.03.2019", "text": "here is the review 3"},
+	{"title": "Review 4", "author": "Josh", "date": "01.04.2019", "text": "here is the review 4"},
+	{"title": "Review 5", "author": "Will", "date": "04.04.2019", "text": "here is the review 5"},
+	{"title": "Review 6", "author": "Richard", "date": "12.04.2019", "text": "here is the review 6"},
+	{"title": "Review 7", "author": "Kyle", "date": "18.04.2019", "text": "here is the review 7"}
 ];
 
 app.get('/list-reviews', function (req, resp){

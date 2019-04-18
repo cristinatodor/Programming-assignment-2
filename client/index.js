@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		document.getElementById('see-do-content').innerHTML = "";
 	});
 	
-	window.addEventListener("load", async function(event){
+	window.addEventListener('load', async function(event){
 		try {
 			let response = await fetch(base_url + '/about-location');
 			
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		} 
 	});
 	
-	window.addEventListener("load", async function(event){
+	window.addEventListener('load', async function(event){
 		try {
 			let response = await fetch(base_url + '/about-history');
 			
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		}
 	});
 	
-	window.addEventListener("load", async function(event){
+	window.addEventListener('load', async function(event){
 		try {
 			let response = await fetch(base_url + '/about-population');
 			
@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		}
 	});
 	
-	window.addEventListener("load", async function(event){
+	window.addEventListener('load', async function(event){
 		try {
 			let response = await fetch(base_url + '/about-industry');
 		
@@ -208,7 +208,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		document.getElementById('event-count9-value').value = events[len-1].count;
 	};
 	
-	window.addEventListener("load", async function(event){
+	window.addEventListener('load', async function(event){
 		try {
 			let response = await fetch(base_url + '/list-events');
 			
@@ -252,14 +252,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		document.getElementById('review-title5').innerHTML = reviews[len-5].title;
 		document.getElementById('review-author5').innerHTML = "Posted by " + reviews[len-5].author;
 		document.getElementById('review-date5').innerHTML = reviews[len-5].date;
-		document.getElementById('review-text5').innerHTML = reviews[len-5];
+		document.getElementById('review-text5').innerHTML = reviews[len-5].text;
 		
 		document.getElementById('review-title6').innerHTML = reviews[len-6].title;
 		document.getElementById('review-author6').innerHTML = "Posted by " + reviews[len-6].author;
 		document.getElementById('review-date6').innerHTML = reviews[len-6].date;
 		document.getElementById('review-text6').innerHTML = reviews[len-6].text;
 	};
-	window.addEventListener("load", async function(event){
+	window.addEventListener('load', async function(event){
 		try {
 			let response = await fetch(base_url + '/list-reviews');
 			
@@ -372,6 +372,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			
 			writeReviews(reviews);
 			
+			document.getElementById('add_review_author').value = '';
+			document.getElementById('add_review_email').value = '';
+			document.getElementById('add_review_title').value = '';
+			document.getElementById('add_review_country').value = '';
+			document.getElementById('add_review_text').value = '';
+			
 			document.getElementById('reviews').scrollIntoView();
 
 		}
@@ -445,6 +451,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				
 			let body = await response.text();
 			let events = JSON.parse(body);
+			
+			emailID = 'add_event_email' + formID;
+			document.getElementById(emailID).value = '';
 				
 			writeEvents(events);
 		}
@@ -454,7 +463,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		}
 	};
 	
-	window.addEventListener("load", async function(event){
+	window.addEventListener('load', async function(event){
 		try {
 			let response = await fetch('https://api.weatherbit.io/v2.0/current?city=ClujNapoca&key=9dc197fb21ab40ff91edc4cfbd39919b');
 			
@@ -465,7 +474,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			let body = await response.text();
 			let weather = JSON.parse(body);
 			
-			document.getElementById('weather1').innerHTML = "<div> Temperature: " + weather.data[0].temp + "</div><br>" 
+			document.getElementById('weather1').innerHTML = "<div> Temperature: " + weather.data[0].temp + " &#8451; </div><br>" 
 			document.getElementById('weather1').innerHTML += "<div> Wind: " + weather.data[0].wind_spd + " m/s </div><br>";
 			document.getElementById('weather1').innerHTML += "<div> Pressure: " + weather.data[0].pres + " mb </div>"
 			
