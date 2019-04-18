@@ -12,7 +12,7 @@ app.use(function(req, res, next) {
 });
 
 
-var route_url = 'http://citypage-programming-assignment-2.7e14.starter-us-west-2.openshiftapps.com';
+var route_url = 'http://127.0.0.1:8080';
 
 console.log(route_url);
 
@@ -153,15 +153,15 @@ app.get('/list-eat-images', function (req, resp){
 });
 
 let events = [
-	{"title": "Event 1", "location": "Location 1", "date": "01.01.2019", "text": "here is the event 1", "count": "134"},
-	{"title": "Event 2", "location": "Location 2", "date": "01.12.2019", "text": "here is the event 2", "count": "101"},
-	{"title": "Event 3", "location": "Location 3", "date": "12.05.2019", "text": "here is the event 3", "count": "59"},
-	{"title": "Event 4", "location": "Location 4", "date": "05.06.2019", "text": "here is the event 4", "count": "38"},
-	{"title": "Event 5", "location": "Location 5", "date": "04.08.2019", "text": "here is the event 5", "count": "156"},
-	{"title": "Event 6", "location": "Location 6", "date": "03.12.2019", "text": "here is the event 6", "count": "342"},
-	{"title": "Event 7", "location": "Location 7", "date": "13.11.2019", "text": "here is the event 7", "count": "45"},
-	{"title": "Event 8", "location": "Location 8", "date": "13.11.2019", "text": "here is the event 8", "count": "67"},
-	{"title": "Event 9", "location": "Location 9", "date": "13.11.2019", "text": "here is the event 9", "count": "180"}
+	{"title": "Event 1", "location": "Location 1", "date": "10.05.2019", "text": "here is the event 1", "count": "134"},
+	{"title": "Event 2", "location": "Location 2", "date": "15.05.2019", "text": "here is the event 2", "count": "101"},
+	{"title": "Event 3", "location": "Location 3", "date": "20.05.2019", "text": "here is the event 3", "count": "59"},
+	{"title": "Event 4", "location": "Location 4", "date": "29.05.2019", "text": "here is the event 4", "count": "38"},
+	{"title": "Event 5", "location": "Location 5", "date": "01.06.2019", "text": "here is the event 5", "count": "156"},
+	{"title": "Event 6", "location": "Location 6", "date": "03.06.2019", "text": "here is the event 6", "count": "342"},
+	{"title": "Event 7", "location": "Location 7", "date": "12.06.2019", "text": "here is the event 7", "count": "45"},
+	{"title": "Event 8", "location": "Location 8", "date": "15.06.2019", "text": "here is the event 8", "count": "67"},
+	{"title": "Event 9", "location": "Location 9", "date": "28.06.2019", "text": "here is the event 9", "count": "180"}
 ];
 
 app.get('/list-events', function (req, resp){
@@ -181,13 +181,13 @@ app.post('/subscribe-event', function(req, resp) {
 
 
 let reviews = [
-	{"title": "Review 1", "author": "John", "date": "12.03.2019", "text": "here is the review 1"},
-	{"title": "Review 2", "author": "Dan", "date": "29.03.2019", "text": "here is the review 2"},
-	{"title": "Review 3", "author": "Alex", "date": "30.03.2019", "text": "here is the review 3"},
-	{"title": "Review 4", "author": "Josh", "date": "01.04.2019", "text": "here is the review 4"},
-	{"title": "Review 5", "author": "Will", "date": "04.04.2019", "text": "here is the review 5"},
-	{"title": "Review 6", "author": "Richard", "date": "12.04.2019", "text": "here is the review 6"},
-	{"title": "Review 7", "author": "Kyle", "date": "18.04.2019", "text": "here is the review 7"}
+	{"title": "So cool", "author": "John", "date": "12.03.2019", "text": "One of the coolest places in Romania."},
+	{"title": "Most beautiful city!", "author": "Dan", "date": "29.03.2019", "text": "I had such a great time in this amazing city. Will definitely visit it again!"},
+	{"title": "A pleasant surprise..", "author": "Alex", "date": "30.03.2019", "text": "I must admit I wasn't expecting Cluj to be such an enjoyable place."},
+	{"title": "Such a student city", "author": "Josh", "date": "01.04.2019", "text": "We absolutely loved the atmosphere young people bring to the city."},
+	{"title": "Affordable", "author": "Will", "date": "04.04.2019", "text": "Very affordable compared to most European cities."},
+	{"title": "Amazing nightlife", "author": "Richard", "date": "12.04.2019", "text": "Had such a great time here, some of the best nigths out of my life!"},
+	{"title": "Worth seeing!", "author": "Kyle", "date": "18.04.2019", "text": "If you are planning on visiting Romania, Cluj is a must-see."}
 ];
 
 app.get('/list-reviews', function (req, resp){

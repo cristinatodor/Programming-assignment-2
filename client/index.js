@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 
-	var base_url = 'http://citypage-programming-assignment-2.7e14.starter-us-west-2.openshiftapps.com';
+	var base_url = 'http://127.0.0.1:8080';
 
 	document.getElementById('get-see-do').addEventListener('click', async function(event){
 		try {
