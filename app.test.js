@@ -3,6 +3,10 @@
 const app = require('./app');
 const request = require('supertest');
 
+function serialise(obj){
+    return Object.keys(obj).map(k => `${encodeURIComponent(k)}=${encodeURIComponent(obj[k])}`).join('&');
+}
+
 describe('Test the city page', () => {
 	test('GET /about-location succeeds', () => {
 		return request(app)
@@ -154,37 +158,96 @@ describe('Test the city page', () => {
 			.expect(200);
 	});
 	
-	test('POST /subscribe-event succeeds', () => {
+	test('POST /add-review succeeds', () => {
+		const params = {add_review_title: 'Test',
+						add_review_author: 'Test',
+						add_review_text: 'Test'};
+		return request(app)
+			.post('/add-review')
+			.send(serialise(params))
+			.expect(200);
+	});
+	
+	test('POST /subscribe-event 1 succeeds', () => {
+		const params = {event_no: '1',
+						add_event_count: '20'};
 		return request(app)
 			.post('/subscribe-event')
+			.send(serialise(params))
+			.expect(200);
+	});
+	
+	test('POST /subscribe-event 2 succeeds', () => {
+		const params = {event_no: '2',
+						add_event_count: '20'};
+		return request(app)
+			.post('/subscribe-event')
+			.send(serialise(params))
+			.expect(200);
+	});
+	
+	test('POST /subscribe-event 3 succeeds', () => {
+		const params = {event_no: '3',
+						add_event_count: '20'};
+		return request(app)
+			.post('/subscribe-event')
+			.send(serialise(params))
+			.expect(200);
+	});
+	
+	test('POST /subscribe-event 4 succeeds', () => {
+		const params = {event_no: '4',
+						add_event_count: '20'};
+		return request(app)
+			.post('/subscribe-event')
+			.send(serialise(params))
+			.expect(200);
+	});
+	
+	test('POST /subscribe-event 5 succeeds', () => {
+		const params = {event_no: '5',
+						add_event_count: '20'};
+		return request(app)
+			.post('/subscribe-event')
+			.send(serialise(params))
+			.expect(200);
+	});
+	
+	test('POST /subscribe-event 6 succeeds', () => {
+		const params = {event_no: '6',
+						add_event_count: '20'};
+		return request(app)
+			.post('/subscribe-event')
+			.send(serialise(params))
+			.expect(200);
+	});
+	
+	test('POST /subscribe-event 7 succeeds', () => {
+		const params = {event_no: '7',
+						add_event_count: '20'};
+		return request(app)
+			.post('/subscribe-event')
+			.send(serialise(params))
+			.expect(200);
+	});
+	
+	test('POST /subscribe-event 8 succeeds', () => {
+		const params = {event_no: '8',
+						add_event_count: '20'};
+		return request(app)
+			.post('/subscribe-event')
+			.send(serialise(params))
+			.expect(200);
+	});
+	
+	test('POST /subscribe-event 9 succeeds', () => {
+		const params = {event_no: '9',
+						add_event_count: '20'};
+		return request(app)
+			.post('/subscribe-event')
+			.send(serialise(params))
 			.expect(200);
 	});
 	
 	
-	
-	
-	
-	
-	/*test('GET /list includes curly', () => {
-        return request(app)
-			.get('/list')
-			.expect(/Curly/);
-    }); */
-	
-	/*test('POST /people needs access_token', () => {
-        return request(app)
-	    .post('/people')
-	    .expect(403);
-    })
-
-    test('POST /people cannot replicate', () => {
-	const params = {access_token: 'concertina',
-			username: 'doctorwhocomposer',
-			forename: 'Bob',
-			surname: 'Builder'};
-        return request(app)
-	    .post('/people')
-	    .send(serialise(params))
-	    .expect(400);
-    }); */
 });

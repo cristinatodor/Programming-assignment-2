@@ -474,7 +474,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			let body = await response.text();
 			let weather = JSON.parse(body);
 			
-			document.getElementById('weather1').innerHTML = "<div> Temperature: " + weather.data[0].temp + " &#8451; </div><br>" 
+			document.getElementById('weather1').innerHTML = "<div> Temperature: <br> " + weather.data[0].temp + " &#8451; </div><br>" 
 			document.getElementById('weather1').innerHTML += "<div> Wind: " + weather.data[0].wind_spd + " m/s </div><br>";
 			document.getElementById('weather1').innerHTML += "<div> Pressure: " + weather.data[0].pres + " mb </div>"
 			
