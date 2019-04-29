@@ -8,7 +8,7 @@ Header | add text
   
 Response code | Description 
 ------------------ | -----------
-200 | add text
+200 | Successful response
 400 | add text  
 
 
