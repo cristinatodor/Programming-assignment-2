@@ -1,6 +1,10 @@
 # Programming term 2 assignment
 
 ## Web application for a city 
+The website can be either run on the local machine of the user by starting the server, or can be accessed using the cloud hosting service.  
+
+Here is the link for the cloud hosted web app: 
+http://citypage-programming-assignment-2.7e14.starter-us-west-2.openshiftapps.com/
 
 The website offers information about the city, allowing people to subcribe to events and add reviews. The site has several sections, each of them using GET/POST requests. 
 
@@ -290,8 +294,147 @@ Response content/example <br>
 <br> "images/eat10.jpg"
 <br> ]
 
-The Events section provides the possiblity of subcribing to one of the nine events listed, by entering the email address.
-The footer of the page, labeled Get involved, allows the user to send a review to the website, which will be then posted in the Reviews section. 
+Events section provides the possiblity of subscribing to one of the nine events listed, by entering the email address. 
+* /list-events <br>
+Request type: GET 
 
-Here is the link for the cloud hosted app: 
-http://citypage-programming-assignment-2.7e14.starter-us-west-2.openshiftapps.com/
+Request parameters | Description 
+------------------ | -----------
+This operation has no parameters | 
+
+Response code | Description 
+------------------ | -----------
+200 | Successful response
+400 | Bad request 
+
+Response content/example <br>
+[ <br>
+&nbsp;&nbsp; { <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "title": "Event 1", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "location": "Location 1", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "date": "10.05.2019", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "text": "here is the event 1", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "count": "134" <br>
+&nbsp;&nbsp; }, <br>
+&nbsp;&nbsp; { <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "title": "Event 2", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "location": "Location 2", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "date": "15.05.2019", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "text": "here is the event 2", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "count": "101" <br>
+&nbsp;&nbsp; }, <br>
+&nbsp;&nbsp; { <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "title": "Event 3", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "location": "Location 3", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "date": "20.05.2019", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "text": "here is the event 3", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "count": "59" <br>
+&nbsp;&nbsp; }, <br>
+&nbsp;&nbsp; { <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "title": "Event 4", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "location": "Location 4", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "date": "29.05.2019", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "text": "here is the event 4", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "count": "38" <br>
+&nbsp;&nbsp; }, <br>
+&nbsp;&nbsp; { <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "title": "Event 5", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "location": "Location 5", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "date": "01.06.2019", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "text": "here is the event 5", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "count": "156" <br>
+&nbsp;&nbsp; }, <br>
+&nbsp;&nbsp; { <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "title": "Event 6", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "location": "Location 6", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "date": "03.06.2019", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "text": "here is the event 6", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "count": "342" <br>
+&nbsp;&nbsp; }, <br>
+&nbsp;&nbsp; { <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "title": "Event 7", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "location": "Location 7", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "date": "12.06.2019", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "text": "here is the event 7", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "count": "45" <br>
+&nbsp;&nbsp; }, <br>
+&nbsp;&nbsp; { <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "title": "Event 8", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "location": "Location 8", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "date": "15.06.2019", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "text": "here is the event 8", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "count": "67" <br>
+}, <br>
+&nbsp;&nbsp; { <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "title": "Event 9", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "location": "Location 9", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "date": "28.06.2019", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "text": "here is the event 9", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "count": "180" <br>
+&nbsp;&nbsp; } <br>
+] <br>
+ 
+ * /subscribe-event <br>
+
+The footer of the page, labeled Get involved, allows the user to send a review to the website, which will be then posted in the Reviews section. 
+* /list-reviews <br>
+Request type: GET
+
+Request parameters | Description 
+------------------ | -----------
+This operation has no parameters | 
+
+Response code | Description 
+------------------ | -----------
+200 | Successful response
+400 | Bad request 
+
+Response content/example <br>
+[ <br>
+&nbsp;&nbsp; { <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "title": "So cool", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "author": "John", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "date": "12.03.2019", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "text": "One of the coolest places in Romania." <br>
+&nbsp;&nbsp; }, <br>
+&nbsp;&nbsp; { <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "title": "Most beautiful city!", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "author": "Dan", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "date": "29.03.2019", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "text": "I had such a great time in this amazing city. Will definitely visit it again!" <br>
+&nbsp;&nbsp; }, <br>
+&nbsp;&nbsp; { <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "title": "A pleasant surprise..", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "author": "Alex", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "date": "30.03.2019", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "text": "I must admit I wasn't expecting Cluj to be such an enjoyable place." <br>
+&nbsp;&nbsp; }, <br>
+&nbsp;&nbsp; { <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "title": "Such a student city", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "author": "Josh", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "date": "01.04.2019", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "text": "We absolutely loved the atmosphere young people bring to the city." <br>
+&nbsp;&nbsp; }, <br>
+&nbsp;&nbsp; { <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "title": "Affordable", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "author": "Will", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "date": "04.04.2019", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "text": "Very affordable compared to most European cities." <br>
+&nbsp;&nbsp; }, <br>
+&nbsp;&nbsp; { <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "title": "Amazing nightlife", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "author": "Richard", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "date": "12.04.2019", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "text": "Had such a great time here, some of the best nigths out of my life!" <br>
+&nbsp;&nbsp; }, <br>
+&nbsp;&nbsp; { <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "title": "Worth seeing!", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "author": "Kyle", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "date": "18.04.2019", <br>
+&nbsp;&nbsp;&nbsp;&nbsp; "text": "If you are planning on visiting Romania, Cluj is a must-see." <br>
+&nbsp;&nbsp; } <br>
+] <br>
+
+* /add-review <br>
+
+
