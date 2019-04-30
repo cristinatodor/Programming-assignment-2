@@ -1,7 +1,9 @@
 # Programming term 2 assignment
 
 ## Web application for a city 
-The website can be either run on the local machine of the user by starting the server, or can be accessed using the cloud hosting service.  
+The website can be either run on the local machine of the user or can be accessed using the cloud hosting service.  
+
+For running the website on a the local machine, start the server by typing the "npm start server.js" on the command prompt and then access http://127.0.0.1:8080. 
 
 Here is the link for the cloud hosted web app: 
 http://citypage-programming-assignment-2.7e14.starter-us-west-2.openshiftapps.com/
@@ -364,7 +366,7 @@ Response content/example <br>
 &nbsp;&nbsp;&nbsp;&nbsp; "date": "15.06.2019", <br>
 &nbsp;&nbsp;&nbsp;&nbsp; "text": "here is the event 8", <br>
 &nbsp;&nbsp;&nbsp;&nbsp; "count": "67" <br>
-}, <br>
+&nbsp;&nbsp; }, <br>
 &nbsp;&nbsp; { <br>
 &nbsp;&nbsp;&nbsp;&nbsp; "title": "Event 9", <br>
 &nbsp;&nbsp;&nbsp;&nbsp; "location": "Location 9", <br>
