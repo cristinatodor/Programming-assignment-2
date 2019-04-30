@@ -12,9 +12,7 @@ app.use(function(req, res, next) {
 });
 
 
-var route_url = 'http://citypage-programming-assignment-2.7e14.starter-us-west-2.openshiftapps.com';
-
-console.log(route_url);
+var route_url = 'http://127.0.0.1:8080';
 
 let aboutLocation = ["Geographically, it is roughly equidistant from Bucharest, Budapest and Belgrade. Located in the Somesul Mic River valley, the city is considered the unofficial capital to the historical province of Transylvania."];
 
@@ -153,15 +151,15 @@ app.get('/list-eat-images', function (req, resp){
 });
 
 let events = [
-	{"title": "Event 1", "location": "Location 1", "date": "10.05.2019", "text": "here is the event 1", "count": "134"},
-	{"title": "Event 2", "location": "Location 2", "date": "15.05.2019", "text": "here is the event 2", "count": "101"},
-	{"title": "Event 3", "location": "Location 3", "date": "20.05.2019", "text": "here is the event 3", "count": "59"},
-	{"title": "Event 4", "location": "Location 4", "date": "29.05.2019", "text": "here is the event 4", "count": "38"},
-	{"title": "Event 5", "location": "Location 5", "date": "01.06.2019", "text": "here is the event 5", "count": "156"},
-	{"title": "Event 6", "location": "Location 6", "date": "03.06.2019", "text": "here is the event 6", "count": "342"},
-	{"title": "Event 7", "location": "Location 7", "date": "12.06.2019", "text": "here is the event 7", "count": "45"},
-	{"title": "Event 8", "location": "Location 8", "date": "15.06.2019", "text": "here is the event 8", "count": "67"},
-	{"title": "Event 9", "location": "Location 9", "date": "28.06.2019", "text": "here is the event 9", "count": "180"}
+	{"title": "Kitsch Party", "location": "FORM Space", "date": "10.05.2019", "text": "22:00 - 04:00", "count": "134"},
+	{"title": "Street food festival", "location": "Museum Square", "date": "15.05.2019", "text": "17:00 - 22:00", "count": "101"},
+	{"title": "Voleyball tournament", "location": "Polyvalent Hall", "date": "20.05.2019", "text": "12:00 - 16:00", "count": "59"},
+	{"title": "Vintage clothes sale", "location": "Central Park", "date": "29.05.2019", "text": "12:00 - 17:00", "count": "308"},
+	{"title": "Craft beer festival", "location": "Museum Square", "date": "01.06.2019", "text": "18:00 - 00:00", "count": "156"},
+	{"title": "Jazz in the Park", "location": "Central Park", "date": "03.06.2019", "text": "10:00 - 00:00", "count": "342"},
+	{"title": "Electro Swing Evening", "location": "Flying Circus", "date": "12.06.2019", "text": "21:00 - 4:00", "count": "45"},
+	{"title": "Mioritmic Festival", "location": "Hoia Woods", "date": "15.06.2019", "text": "11:00 - 06:00", "count": "607"},
+	{"title": "Tattoo Expo", "location": "Unirii Square", "date": "28.06.2019", "text": "13:00 - 16:00", "count": "180"}
 ];
 
 app.get('/list-events', function (req, resp){
@@ -202,7 +200,7 @@ app.post('/add-review', function(req, resp) {
 	const revText = req.body.add_review_text;
 		
 	var curDay = function(){
-		today = new Date();
+		let today = new Date();
 		var day = today.getDate();
 		var month = today.getMonth()+1; 
 		var year = today.getFullYear();

@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 
-	var base_url = 'http://citypage-programming-assignment-2.7e14.starter-us-west-2.openshiftapps.com';
+	var base_url = 'http://127.0.0.1:8080';
 
 	document.getElementById('get-see-do').addEventListener('click', async function(event){
 		try {
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		
 			document.getElementById('get-see-do').style.visibility = "hidden";
 			document.getElementById('hide-see-do').style.visibility = "visible";
-			 
+			
 			for(let i = 0; i < titles.length; i++){
 				var num = i+1;
 				if (i%2 == 0) {
@@ -206,7 +206,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		document.getElementById('event-text9').innerHTML = events[len-1].text;
 		document.getElementById('event-count9').innerHTML = events[len-1].count + " people are interested";
 		document.getElementById('event-count9-value').value = events[len-1].count;
-	};
+	}
 	
 	window.addEventListener('load', async function(event){
 		try {
@@ -258,7 +258,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		document.getElementById('review-author6').innerHTML = "Posted by " + reviews[len-6].author;
 		document.getElementById('review-date6').innerHTML = reviews[len-6].date;
 		document.getElementById('review-text6').innerHTML = reviews[len-6].text;
-	};
+	}
 	window.addEventListener('load', async function(event){
 		try {
 			let response = await fetch(base_url + '/list-reviews');
@@ -305,7 +305,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		
 			document.getElementById('get-eat').style.visibility = "hidden";
 			document.getElementById('hide-eat').style.visibility = "visible";
-			 
+			
 			for(let i = 0; i < titles.length; i++){
 				var num = i+1;
 				if (i%2 == 0) {
@@ -452,7 +452,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			let body = await response.text();
 			let events = JSON.parse(body);
 			
-			emailID = 'add_event_email' + formID;
+			let emailID = 'add_event_email' + formID;
 			document.getElementById(emailID).value = '';
 				
 			writeEvents(events);
@@ -461,7 +461,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		catch (error) {
 			alert("Problem encountered 10: " + error.message);
 		}
-	};
+	}
 	
 	window.addEventListener('load', async function(event){
 		try {
