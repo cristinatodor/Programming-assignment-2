@@ -5,7 +5,7 @@ The website can be either run on the local machine of the user or can be accesse
 
 For running the website on a the local machine, start the server by typing the "npm start server.js" on the command prompt and then access http://127.0.0.1:8080. 
 
-Here is the link for the cloud hosted web app: 
+Here is the link for the cloud hosted web app <br>
 http://citypage-programming-assignment-2.7e14.starter-us-west-2.openshiftapps.com/
 
 The website offers information about the city, allowing people to subcribe to events and add reviews. The site has several sections, each of them using GET/POST requests. 
@@ -69,7 +69,8 @@ Response content/example <br>
 "count": 1 <br>
 } <br>
 
-About section offers information about the location, history, population and industry. Each of these has a Read More button, that uses a request to retrieve more information. 
+### About
+This section offers information about the location, history, population and industry. Each of these has a Read More button, that uses a request to retrieve more information. 
 
 * /about-location <br>
 Request type: GET 
@@ -136,9 +137,10 @@ Response content/example <br>
 "An example of such initiative is Cluj IT Cluster. It envisions becoming one of the most credible suppliers from Central and Eastern Europe for innovative IT services and products as well as of organizational support systems, with the majority of its members able to be competitive on national and international markets." <br>
 ]
 
-Places section is divided into 2 parts, See & Do and Eat. Each of these has a Show More button, that uses a request to retrieve those places. 
+### Places
+This section is divided into 2 parts, See & Do and Eat. Each of these has a Show More button, that uses a request to retrieve those places. 
 
-See & Do: <br>
+#### See & Do: <br>
 * /list-see-titles <br>
 Request type: GET 
 
@@ -217,7 +219,7 @@ Response content/example <br>
 <br>"images/see10.jpg"
 ]
 
-Eat: <br>
+#### Eat: <br>
 * /list-eat-titles <br>
 Request type: GET 
 
@@ -296,7 +298,8 @@ Response content/example <br>
 <br> "images/eat10.jpg"
 <br> ]
 
-Events section provides the possiblity of subscribing to one of the nine events listed, by entering the email address. 
+### Events
+This section provides the possiblity of subscribing to one of the nine events listed, by entering the email address. 
 * /list-events <br>
 Request type: GET 
 
@@ -377,7 +380,22 @@ Response content/example <br>
 ] <br>
  
  * /subscribe-event <br>
+Request type: POST
 
+Request parameters | Description 
+------------------ | -----------
+event_no | Event ID
+add_event_count | Current number of subscribers
+
+Response code | Description 
+------------------ | -----------
+200 | Successful response
+400 | Bad request 
+
+Response content/example <br>
+"Subscribed to event"
+
+### Reviews
 The footer of the page, labeled Get involved, allows the user to send a review to the website, which will be then posted in the Reviews section. 
 * /list-reviews <br>
 Request type: GET
@@ -438,5 +456,20 @@ Response content/example <br>
 ] <br>
 
 * /add-review <br>
+Request type: POST
 
+Request parameters | Description 
+------------------ | -----------
+revTitle | Review title
+revAuthor | Review author name
+curDay | Date of posting the review
+revText | Review content
+
+Response code | Description 
+------------------ | -----------
+200 | Successful response
+400 | Bad request 
+
+Response content/example <br>
+"Added reviews"
 
