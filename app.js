@@ -12,7 +12,7 @@ app.use(function(req, res, next) {
 });
 
 
-var route_url = 'http://127.0.0.1:8080';
+var route_url = 'http://citypage-programming-assignment-2.7e14.starter-us-west-2.openshiftapps.com';
 
 let aboutLocation = ["Geographically, it is roughly equidistant from Bucharest, Budapest and Belgrade. Located in the Somesul Mic River valley, the city is considered the unofficial capital to the historical province of Transylvania."];
 
