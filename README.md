@@ -81,11 +81,215 @@ Response content/example <br>
 [ <br>
 "Geographically, it is roughly equidistant from Bucharest, Budapest and Belgrade. Located in the Somesul Mic River valley, the city is considered the unofficial capital to the historical province of Transylvania." <br>
 ]
-* /about-history 
-* /about-population
-* /about-industry
+* /about-history <br>
+Request type: GET 
 
-By clicking on the Read More and Show More buttons in the About and Places sections, repectively, the user can get more information about those sections. 
+Request parameters | Description 
+------------------ | -----------
+This operation has no parameters | 
+
+Response code | Description 
+------------------ | -----------
+200 | Successful response
+400 | Bad request 
+
+Response content/example <br>
+[ <br>
+"Cluj is an urban republic, a homeland for its inhabitants, a city where the organization of local administration, the proper distribution of taxes, the public order and urban development were, most of the time, more important than European events or princes’ politics." <br>
+]
+* /about-population  <br>
+Request type: GET 
+
+Request parameters | Description 
+------------------ | -----------
+This operation has no parameters | 
+
+Response code | Description 
+------------------ | -----------
+200 | Successful response
+400 | Bad request 
+
+Response content/example <br> 
+[ <br>
+"From the Middle Ages onwards, the city of Cluj has been a multicultural city with a diverse cultural and religious life. The population is made up of ethnic Romanians(81.5%), Hungarians, Romani, Germans and Jews." <br>
+]
+* /about-industry  <br>
+Request type: GET 
+
+Request parameters | Description 
+------------------ | -----------
+This operation has no parameters | 
+
+Response code | Description 
+------------------ | -----------
+200 | Successful response
+400 | Bad request 
+
+Response content/example <br>
+[ <br>
+"An example of such initiative is Cluj IT Cluster. It envisions becoming one of the most credible suppliers from Central and Eastern Europe for innovative IT services and products as well as of organizational support systems, with the majority of its members able to be competitive on national and international markets." <br>
+]
+
+Places section is divided into 2 parts, See & Do and Eat. Each of these has a Show More button, that uses a request to retrieve those places. 
+
+See & Do: <br>
+* /list-see-titles <br>
+Request type: GET 
+
+Request parameters | Description 
+------------------ | -----------
+This operation has no parameters | 
+
+Response code | Description 
+------------------ | -----------
+200 | Successful response
+400 | Bad request 
+
+Response content/example <br>
+[ 
+<br> "St Michael's Church",
+<br> "Cluj-Napoca Art Museum",
+<br> "Botanical garden",
+<br> "Central Park",
+<br> "Lake Tarnita",
+<br> "Moara de vant",
+<br> "Piezisa Street",
+<br> "Fortress Hill",
+<br> "Hoia-Baciu Woods",
+<br> "Banffy Castle"
+<br> ]
+
+* /list-see-descriptions <br>
+Request type: GET 
+
+Request parameters | Description 
+------------------ | -----------
+This operation has no parameters | 
+
+Response code | Description 
+------------------ | -----------
+200 | Successful response
+400 | Bad request 
+
+Response content/example <br>
+[
+<br> "Cluj-Napoca's heavyweight sight is this stunning 15th-century Gothic church on Unirii Square.",
+<br> "On the other side of Strada Iuliu Maniu, the Banffy Palace is a stately partner to St Michael's Church.",
+<br> "A few minutes on foot from the Old Town is a 14-hectare botanical garden plotted in the 1920s.",
+<br> "Now more than 190 years old, Cluj's main park was one of the first public spaces for recreation in Eastern Europe.",
+<br> "An outdoor excursion of choice in summer for Cluj-Napoca residents, Lake Tarnita twists between tall hills that have a mantle of forest.",
+<br> "A great petting zoo, especially for kids, as they can play with the animals and feed them.",
+<br> "One third of Cluj's population is formed by students and their favourite place in the city is this road full of bars where you can have a drink for far less than in the city centre.",
+<br> "For the best views of the city and the surrounding landscape, climb some 200 feet up this hill, whose name refers to an Austrian fortress built here in the 18-th century.",
+<br> "A forested area ideal for nature walks and relaxation, this place has a reputation for intense paranormal activity and unexplained events.",
+<br> "This architectural monument situated in Bontida is now home to one of the biggest Romanian festivals, Electric Castle."
+<br> ]
+
+* /list-see-images <br>
+Request type: GET 
+
+Request parameters | Description 
+------------------ | -----------
+This operation has no parameters | 
+
+Response code | Description 
+------------------ | -----------
+200 | Successful response
+400 | Bad request 
+
+Response content/example <br>
+[
+<br>"images/gallery1.jpg",
+<br>"images/see2.jpg",
+<br>"images/see3c.jpg",
+<br>"images/see4.jpg",
+<br>"images/see5.jpg",
+<br>"images/see6.jpg",
+<br>"images/see7.jpg",
+<br>"images/see8.jpg",
+<br>"images/see9.jpg",
+<br>"images/see10.jpg"
+]
+
+Eat: <br>
+* /list-eat-titles <br>
+Request type: GET 
+
+Request parameters | Description 
+------------------ | -----------
+This operation has no parameters | 
+
+Response code | Description 
+------------------ | -----------
+200 | Successful response
+400 | Bad request 
+
+Response content/example <br>
+[
+<br> "Euphoria Biergarten",
+<br> "Colin's GastroPub",
+<br> "Samsara Foodhouse",
+<br> "Carrousel",
+<br> "Via Restaurant",
+<br> "Klausen Burger",
+<br> "Casa Boema",
+<br> "Toulouse Cafe-Brasserie",
+<br> "Eggcetera",
+<br> "Roata"
+<br> ]
+
+* /list-eat-descriptions <br>
+Request type: GET 
+
+Request parameters | Description 
+------------------ | -----------
+This operation has no parameters | 
+
+Response code | Description 
+------------------ | -----------
+200 | Successful response
+400 | Bad request 
+
+Response content/example <br>
+[
+<br> "One of the most popular terraces in the city during summer, this place offers a broad range of dishes influenced by international and Transylvanian cuisine. ",
+<br> "With a small restaurant and a lovely terrace, Colin’s GastroPub is the place where homemade and local are the two words that best define their cuisine.",
+<br> "A culinary paradise for vegetarians and vegans, Samsara FoodHouse offers only vegetarian and raw meals.",
+<br> "A mix between Romanian, French and Italian cuisine, the restaurant uses mainly local produce for the meals. The location is ideal if you want to have a dinner with friends or just fancy a good glass of wine in the evening.",
+<br> "Hidden in one of the pedestrian streets of Cluj and surrounded by the old walls of the medieval citadel, this restaurant has an exceptional location in a baroque palace.",
+<br> "A great meal is always better when it comes with a beautiful view. Klausen Burger terrace has them both. If you are a gourmand, then this restaurant is made for you, as the portions are abundant.",
+<br> "The garden is charming, the staff is wonderful and the location is just right - close to the city center, but away from all the traffic and noise.",
+<br> "The atmosphere here just screams French. From the wood paneled walls, to the pictures and posters on the walls, from the fancy dishes, to the snobbish looking people you might come across, this place is French.",
+<br> "The menu is mostly made up of different breakfast toasts, both sweet and savory, that seem designed for Instagram.",
+<br> "This is one of the best places in Cluj to try authentic, homestyle Romanian dishes. The menu features soups, grilled meats and several Transylvanian specialties."
+<br> ]
+
+* /list-eat-images <br>
+Request type: GET 
+
+Request parameters | Description 
+------------------ | -----------
+This operation has no parameters | 
+
+Response code | Description 
+------------------ | -----------
+200 | Successful response
+400 | Bad request 
+
+Response content/example <br>
+[
+<br> "images/eat1.jpg",
+<br> "images/eat2.jpg",
+<br> "images/eat3.jpg",
+<br> "images/eat4.jpg",
+<br> "images/eat5.jpg",
+<br> "images/eat6.jpg",
+<br> "images/eat7.jpg",
+<br> "images/eat8.jpg",
+<br> "images/eat9.jpg",
+<br> "images/eat10.jpg"
+<br> ]
+
 The Events section provides the possiblity of subcribing to one of the nine events listed, by entering the email address.
 The footer of the page, labeled Get involved, allows the user to send a review to the website, which will be then posted in the Reviews section. 
 
